@@ -1,0 +1,2 @@
+# odoo
+repositorio CRM
