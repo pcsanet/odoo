@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="user_vendedor" model="res.users">
+        <field name="name">Vendedor PCSA</field>
+        <field name="login">vendedor@pcsa.test</field>
+        <field name="password">pcsa2025*</field>
+        <field name="company_id" ref="company_pcsa"/>
+        <field name="groups_id" eval="[(4, ref('pcsa_erp.group_pcsa_vendedor'))]"/>
+    </record>
+
+    <record id="user_tecnico" model="res.users">
+        <field name="name">Técnico Soporte</field>
+        <field name="login">tecnico@pcsa.test</field>
+        <field name="password">pcsa2025*</field>
+        <field name="company_id" ref="company_pcsa"/>
+        <field name="groups_id" eval="[(4, ref('pcsa_erp.group_pcsa_tecnico'))]"/>
+    </record>
+
+    <record id="cliente_minorista" model="res.partner">
+        <field name="name">Cliente Minorista</field>
+        <field name="vat">00000000</field>
+        <field name="l10n_latam_identification_type_id" ref="l10n_pe.it_DNI"/>
+        <field name="company_id" ref="company_pcsa"/>
+    </record>
+
+    <record id="cliente_empresa" model="res.partner">
+        <field name="name">EMPRESA XYZ S.A.C.</field>
+        <field name="vat">20123456789</field>
+        <field name="l10n_latam_identification_type_id" ref="l10n_pe.it_RUC"/>
+        <field name="company_id" ref="company_pcsa"/>
+    </record>
+
+    <record id="product_laptop" model="product.template">
+        <field name="name">Laptop HP Core i5</field>
+        <field name="list_price">2500.00</field>
+        <field name="standard_price">2000.00</field>
+        <field name="type">product</field>
+        <field name="tipo_sunat">producto</field>
+        <field name="company_id" ref="company_pcsa"/>
+    </record>
+
+    <record id="product_servicio_tecnico" model="product.template">
+        <field name="name">Servicio Técnico por Hora</field>
+        <field name="list_price">50.00</field>
+        <field name="type">service</field>
+        <field name="tipo_sunat">servicio</field>
+        <field name="company_id" ref="company_pcsa"/>
+    </record>
+</odoo>

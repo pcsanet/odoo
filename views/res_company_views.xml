@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_pcsa" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.pcsa</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='settings']" position="after">
+                <page string="Establecimientos Anexos">
+                    <field name="establecimiento_anexo_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="codigo"/>
+                            <field name="direccion"/>
+                            <field name="ubigeo"/>
+                            <field name="active"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="name"/>
+                                <field name="codigo"/>
+                                <field name="direccion"/>
+                                <field name="ubigeo"/>
+                                <field name="active"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

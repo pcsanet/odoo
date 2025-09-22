@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_task_form_inherit_pcsa" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.pcsa</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="tipo_servicio"/>
+                <field name="equipo_cliente"/>
+                <field name="horas_trabajadas"/>
+                <field name="proforma_id"/>
+                <button name="action_generar_proforma" string="Generar Proforma" type="object" class="btn-primary"/>
+                <field name="diagnostico" widget="textarea"/>
+                <field name="solucion" widget="textarea"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

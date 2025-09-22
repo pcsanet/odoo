@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="company_pcsa" model="res.company">
+        <field name="name">PERSONAL COMPUTER SERVICIOS Y ANALISIS E.I.R.L.</field>
+        <field name="vat">20537919567</field>
+        <field name="street">MZA. C LOTE. 13 COO. MONTECARLO</field>
+        <field name="city">CALLAO</field>
+        <field name="country_id" ref="base.pe"/>
+        <field name="email">pcsanet@gmail.com</field>
+        <field name="phone">999888777</field>
+    </record>
+
+    <record id="establecimiento_anexo_moquegua" model="pcsa.establecimiento.anexo">
+        <field name="name">Sucursal Moquegua</field>
+        <field name="codigo">0001</field>
+        <field name="direccion">ASOCIACIÓN CIUDAD NUEVA MZ. K7 LT. 09 SAN ANTONIO MOQUEGUA</field>
+        <field name="ubigeo">180101</field>
+        <field name="company_id" ref="company_pcsa"/>
+    </record>
+</odoo>

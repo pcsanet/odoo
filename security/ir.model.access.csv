@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pcsa_establecimiento_anexo,pcsa.establecimiento.anexo,model_pcsa_establecimiento_anexo,group_pcsa_admin,1,1,1,1
+access_pcsa_establecimiento_anexo_vendedor,pcsa.establecimiento.anexo,model_pcsa_establecimiento_anexo,group_pcsa_vendedor,1,0,0,0
+access_sunat_integration,sunat.integration,model_sunat_integration,group_pcsa_admin,1,1,1,1
